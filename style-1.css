@@ -25,7 +25,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "songti", "Noto Sans SC", sans-serif;
-  font-size: 1em;
+
 }
 
 .btn,
@@ -79,11 +79,11 @@ li {
   width: 100%;
   max-width: 300px;
   text-align: center;
-  border-radius: 40% 40% 40% 40% / 10% 10% 10% 10%;
+  border-radius: 50% 50% 50% 50% / 20% 20% 20% 20%;
 }
 
 .category--label {
-  font-size: 4rem;
+  font-size: 8rem;
   opacity: 0.8;
 }
 
@@ -107,8 +107,7 @@ li {
 
 .section--subject {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  gap: 3%;
   align-items: center;
   justify-content: center;
   padding: 5em 1.5em;
@@ -134,17 +133,30 @@ li {
   background-color: var(--third-light-clr);
 }
 
+.section--subject#fo {
+  flex-direction: row-reverse;
+}
+
+.section--subject--reference {
+  width: 60%;
+  height: 100%;
+  padding: 1em;
+}
+
+.section--subject--type {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section--subject--type img {
-  width: 50vw;
+  width: 70%;
   border-radius: 50%;
   padding: 1em;
 }
 
-.section--subject--reference {
-  padding: 2em;
-}
-
-.reference--list {
+.reference .reference--list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -154,14 +166,15 @@ li {
   display: flex;
   background-color: rgba(255, 255, 255, 0.411);
   align-items: center;
+  gap: 20px;
   padding: 1em;
   margin: 1em 0;
   border-radius: 1em;
 }
 
 .reference--item .item--image {
-  width: 35%;
-  aspect-ratio: 4/3;
+  width: 250px;
+  aspect-ratio: 4/2;
   border-radius: 1em;
   object-fit: cover;
 }
@@ -169,89 +182,26 @@ li {
 .reference--item .item--link {
   text-decoration: none;
   color: var(----primary-dark-clr);
-  font-size: 1em;
-  padding-left: 1em;
-}
-
-/* .reference--video .reference--item{
-    gap: 10%;
-} */
-.reference--video .reference--item .item--link {
-  width: 70%;
+  font-size: 1.5em;
 }
 
 .reference--item .item--type {
   background-color: var(--accent-dark-clr);
   color: #f1e5d1;
   font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  padding: 0.5em 0.75em;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
   border-radius: 1em;
 }
 
-@media (min-width: 600px) {
-  .category--label {
-    font-size: 8rem;
-  }
-
-  .section--subject {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .section--subject#fo {
-    flex-direction: row-reverse;
-  }
-
-  .section--subject--reference {
-    width: 60%;
-  }
-
-  .section--subject--type {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .section--subject--type img {
-    width: 70%;
-  }
-
-  .reference--item .item--image {
-    width: 35%;
-    aspect-ratio: 4/2;
-  }
-
-  .reference--item .item--type {
-    font-size: 1.5em;
-  }
-
-  .reference--item .item--link{
-    font-size: 1.5em;
+@media (max-width: 899px) {
+  .category.btn {
+    border-radius: 40% 40% 40% 40% / 10% 10% 10% 10%;
   }
 }
 
-@media (min-width: 900px) {
-  body {
-    font-size: 1.5em;
-  }
-
-  .category.btn {
-    border-radius: 50% 50% 50% 50% / 20% 20% 20% 20%;
-  }
-
-  .section--subject--reference {
-    width: 60%;
-    height: 100%;
-  }
-
-  .section--subject--type {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 599px) {
+  .category--label {
+    font-size: 4rem;
   }
 }
