@@ -2,11 +2,28 @@
   --bg-clr: #e0deda;
   --primary-clr: #2a2a2a;
   --primary-dark-clr: #e6a4a2;
+  --secondary-clr: #b5c18e;
+  --secondary-light-clr: #ccd3ca;
+  --third-clr: #eadbc8;
+  --third-light-clr: #f0ebe3;
+  --fourth-clr: #c7b7a3;
+  --fourth-light-clr: #f6f5f2;
 }
+
+@font-face {
+  font-family: "songti";
+  src: url(./assets/fonts/songti-sc-regular.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body {
   color: var(--primary-clr);
   padding: 0;
   margin: 0;
+  font-family: "songti", "Noto Sans SC", sans-serif;
 }
 
 .section--intro {
@@ -63,6 +80,106 @@ body {
   background-image: url(./assets/images/buddha-1.png);
   background-size: cover;
   background-position: 50%;
+}
+
+.section--subject {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 1.5em;
+}
+
+.section--subject#dao {
+    background-color: var(--secondary-light-clr);
+}
+.section--subject#fo {
+    background-color: var(--third-light-clr);
+}
+.section--subject#yu {
+    background-color: var(--fourth-light-clr);
+}
+
+.section--subject#dao .section--subject--type img  {
+    background-color: var(--third-light-clr);
+}
+.section--subject#fo .section--subject--type img {
+    background-color: var(--secondary-clr);
+}
+.section--subject#yu .section--subject--type img {
+    background-color: var(--fourth-clr);
+}
+
+
+.section--subject#fo {
+  flex-direction: row-reverse;
+}
+
+.section--subject--reference {
+  height: 100%;
+}
+
+.section--subject--type,
+.section--subject--reference {
+  flex-basis: 50%;
+}
+
+.divider {
+  border: 2px solid rgb(204, 204, 204);
+}
+
+.section--subject--type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section--subject--type img {
+    background-color: var(--secondary-clr);
+  width: 70%;
+  border-radius: 50%;
+  padding: 1em;
+
+}
+
+
+
+.reference .reference--list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reference--item {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.411);
+  align-items: center;
+  gap: 20px;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 1em;
+}
+
+.reference--item .item--image {
+  width: 250px;
+  aspect-ratio: 4/2;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+.reference--item .item--link {
+  text-decoration: none;
+  color: var(--primary-clr);
+  font-size: 1.5em;
+}
+
+.reference--item .item--type {
+  background-color: var(--primary-dark-clr);
+  color: #f1e5d1;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 @media (max-width: 899px) {
