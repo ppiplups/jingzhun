@@ -1,0 +1,78 @@
+:root {
+  --bg-clr: #e0deda;
+  --primary-clr: #2a2a2a;
+  --primary-dark-clr: #e6a4a2;
+}
+body {
+  color: var(--primary-clr);
+  padding: 0;
+  margin: 0;
+}
+
+.section--intro {
+  display: flex;
+  gap: 1.5em;
+  height: 100vh;
+  background-color: var(--bg-clr);
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.category {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section--intro--list {
+  list-style: none;
+}
+
+.category.btn {
+  text-decoration: none;
+  background-color: var(--primary-dark-clr);
+  color: white;
+  height: 60%;
+  min-height: 300px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 50% 50% 50% 50% / 20% 20% 20% 20%;
+}
+
+.category--label {
+  font-size: 8rem;
+  opacity: 0.8;
+}
+
+.category[href="#dao"] {
+  background-image: url(./assets/images/laozi.jpg);
+  background-position: 40% 0;
+  background-size: cover;
+}
+
+.category[href="#yu"] {
+  background-image: url(./assets/images/kongzi.png);
+  background-size: cover;
+  background-position: 50%;
+}
+
+.category[href="#fo"] {
+  background-image: url(./assets/images/buddha-1.png);
+  background-size: cover;
+  background-position: 50%;
+}
+
+@media (max-width: 899px) {
+  .category.btn {
+    border-radius: 40% 40% 40% 40% / 10% 10% 10% 10%;
+  }
+}
+
+@media (max-width: 599px) {
+  .category--label {
+    font-size: 4rem;
+  }
+}
