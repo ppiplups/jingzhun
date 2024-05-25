@@ -25,7 +25,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "songti", "Noto Sans SC", sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
 .btn,
@@ -111,7 +111,7 @@ li {
   gap: 1em;
   align-items: center;
   justify-content: center;
-  padding: 5em 1.5em;
+  padding: 5em 1em;
 }
 
 .section--subject#dao {
@@ -141,7 +141,7 @@ li {
 }
 
 .section--subject--reference {
-  padding: 2em;
+  padding: 1em;
 }
 
 .reference--list {
@@ -153,7 +153,7 @@ li {
 .reference--item {
   display: flex;
   background-color: rgba(255, 255, 255, 0.411);
-  align-items: center;
+  align-items: start;
   padding: 1em;
   margin: 1em 0;
   border-radius: 1em;
@@ -162,20 +162,18 @@ li {
 .reference--item .item--image {
   width: 35%;
   aspect-ratio: 4/3;
-  border-radius: 1em;
+  border-radius: 0.75em;
   object-fit: cover;
 }
 
 .reference--item .item--link {
   text-decoration: none;
   color: var(----primary-dark-clr);
-  font-size: 1em;
+  align-self: center;
   padding-left: 1em;
 }
 
-/* .reference--video .reference--item{
-    gap: 10%;
-} */
+
 .reference--video .reference--item .item--link {
   width: 70%;
 }
@@ -184,15 +182,19 @@ li {
   background-color: var(--accent-dark-clr);
   color: #f1e5d1;
   font-weight: bold;
-  font-size: 1em;
   text-align: center;
+  text-wrap: nowrap;
   padding: 0.5em 0.75em;
   border-radius: 1em;
 }
 
+
 @media (min-width: 600px) {
+  body{
+    font-size: 1.5em;
+  }
   .category--label {
-    font-size: 8rem;
+    font-size: 8em;
   }
 
   .section--subject {
@@ -225,20 +227,13 @@ li {
     aspect-ratio: 4/2;
   }
 
-  .reference--item .item--type {
-    font-size: 1.5em;
-  }
-
-  .reference--item .item--link{
+  .reference--item .item--type,
+  .reference--item .item--link {
     font-size: 1.5em;
   }
 }
 
 @media (min-width: 900px) {
-  body {
-    font-size: 1.5em;
-  }
-
   .category.btn {
     border-radius: 50% 50% 50% 50% / 20% 20% 20% 20%;
   }
